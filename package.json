@@ -4,6 +4,7 @@
   "description": "installs a package and starts rpc-server using exported function",
   "main": "index.js",
   "dependencies": {
+    "@modulus/rabbit-rpc": "0.1.0",
     "npm": "~3.8.9"
   },
   "devDependencies": {},
