@@ -1,0 +1,15 @@
+{
+  "name": "@modulus/rpc-worker",
+  "version": "0.0.0",
+  "description": "installs a package and starts rpc-server using exported function",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "~3.8.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Boberg <hello@jackboberg.info> (http://jackboberg.info/)",
+  "license": "MIT"
+}
