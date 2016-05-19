@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+
+const Cliclopts = require('cliclopts');
+const FS = require('fs');
+const Minimist = require('minimist');
+const Options = require('../options');
+const Path = require('path');
+const PKG = require('../package');
+const RC = require('rc');
+const Worker = require('..');
+
+const clopts = Cliclopts(Options);
+const argv = Minimist(process.argv.slice(2), clopts.options());
+const rc = RC('worker', clopts.default(), argv);
+
+const options = {
+  amqp: {
+    host: rc.host,
+    options: rc.opts || {}
+  },
+  fn: rc._[0],
+  queue: rc.queue,
+  capacity: rc.capacity || 1
+};
+
+if (argv.tls) {
+  ['cert', 'key', 'ca'].forEach((key) => {
+    let path = Path.resolve(process.cwd(), Path.join(argv.tls, `${key}.pem`));
+
+    try {
+      FS.accessSync(path, FS.R_OK);
+      options.amqp.options[key] = FS.readFileSync(path);
+    } catch (e) {
+      console.error(`Unable to load ${path}`);
+      return;
+    }
+  });
+}
+
+if (argv.help) {
+  console.log('Usage: rpc-worker [options] <pkg>\n');
+  clopts.print();
+  process.exit();
+}
+
+if (argv.version) {
+  console.log(PKG.version);
+  process.exit();
+}
+
+Worker(options);

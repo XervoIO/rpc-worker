@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "installs a package and starts rpc-server using exported function",
   "main": "index.js",
+  "bin": "./bin/cli",
   "dependencies": {
     "@modulus/rabbit-rpc": "0.1.0",
     "cliclopts": "1.1.1",
