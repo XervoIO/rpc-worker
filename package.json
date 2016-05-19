@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@modulus/rabbit-rpc": "0.1.0",
+    "minimist": "1.2.0",
     "npm": "~3.8.9",
     "rc": "1.1.6",
     "uuid": "2.0.2"
