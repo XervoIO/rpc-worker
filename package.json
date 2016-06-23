@@ -2,6 +2,9 @@
   "name": "@modulus/rpc-worker",
   "version": "0.0.0",
   "description": "installs a package and starts rpc-server using exported function",
+  "engines": {
+    "node": ">=6.x.x"
+  },
   "main": "index.js",
   "bin": "./bin/cli",
   "dependencies": {
