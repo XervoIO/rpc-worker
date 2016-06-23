@@ -1,12 +1,12 @@
 {
   "name": "@modulus/rpc-worker",
-  "version": "0.0.0",
   "description": "installs a package and starts rpc-server using exported function",
-  "engines": {
-    "node": ">=6.x.x"
-  },
-  "main": "index.js",
+  "version": "0.0.0",
+  "author": "Jack Boberg <hello@jackboberg.info> (http://jackboberg.info/)",
   "bin": "./bin/cli",
+  "bugs": {
+    "url": "https://github.com/onmodulus/rpc-worker/issues"
+  },
   "dependencies": {
     "@modulus/rabbit-rpc": "0.1.0",
     "cliclopts": "1.1.1",
@@ -16,10 +16,24 @@
     "uuid": "2.0.2"
   },
   "devDependencies": {},
+  "engines": {
+    "node": ">=6.x.x"
+  },
+  "homepage": "https://github.com/onmodulus/rpc-worker",
+  "keywords": [
+    "amqp",
+    "rabbitMQ",
+    "rpc",
+    "worker"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onmodulus/rpc-worker.git"
+  },
   "scripts": {
     "postinstall": "npm link npm",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jack Boberg <hello@jackboberg.info> (http://jackboberg.info/)",
-  "license": "MIT"
+  }
 }
