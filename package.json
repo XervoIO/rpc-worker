@@ -1,7 +1,7 @@
 {
   "name": "@modulus/rpc-worker",
   "description": "installs a package and starts rpc-server using exported function",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Jack Boberg <hello@jackboberg.info> (http://jackboberg.info/)",
   "bin": "./bin/cli",
   "bugs": {
