@@ -34,7 +34,7 @@ rpc-worker -h amqps://admin:pencil@rabbit.example.com \
   gravatar-profile
 ```
 
-##### Using the docker iamge
+##### Using the docker image
 
 ```
 docker pull onmodulus/rpc-worker
