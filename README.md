@@ -33,3 +33,13 @@ rpc-worker -h amqps://admin:pencil@rabbit.example.com \
   --opts.passphrase mySecret1 \
   gravatar-profile
 ```
+
+##### Using the docker iamge
+
+```
+docker pull onmodulus/rpc-worker
+docker run -it onmodulus/rpc-worker # prints help
+
+docker run -d -v ~/.npmrc:/mnt/app/.npmrc \
+  onmodulus/rpc-worker @modulus/private-module
+```
